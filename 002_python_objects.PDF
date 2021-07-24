@@ -1,0 +1,238 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "4d435325",
+   "metadata": {},
+   "source": [
+    "# Classes and Objects in Python"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a46907ee",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-3-94752872cc01>, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  File \u001b[1;32m\"<ipython-input-3-94752872cc01>\"\u001b[1;36m, line \u001b[1;32m1\u001b[0m\n\u001b[1;33m    in Python everything is an object\u001b[0m\n\u001b[1;37m    ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "in Python everything is an object"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff0c5ba3",
+   "metadata": {},
+   "source": [
+    "in Python everything is an object"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b99d6adf",
+   "metadata": {},
+   "source": [
+    "#### Types"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd906f8c",
+   "metadata": {},
+   "source": [
+    "* int \n",
+    "* string\n",
+    "* list\n",
+    "* dictionary\n",
+    "* bool\n",
+    "* float"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "708da225",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 5\n",
+    "print(type(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "666ccc95",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 3, 4, 5, 6]\n"
+     ]
+    }
+   ],
+   "source": [
+    "a_list = [1,2,3,3,4,5,6]\n",
+    "a_list.sort()\n",
+    "print(a_list)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c4f7169d",
+   "metadata": {},
+   "source": [
+    "### Create your own Class"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "d4a12a89",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class my_first_class:\n",
+    "    i = 5\n",
+    "    def f(a):\n",
+    "        return a**2\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "0ab113d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_object = my_first_class"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "580c121a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_object.i"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "5de484d7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_object.f(3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "02ea10e3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class my_first_class:\n",
+    "    i = 5\n",
+    "    def f(a):\n",
+    "        return a**2\n",
+    "    def _init_(self, value):\n",
+    "        self.i = value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "ddd6a526",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "my_first_class() takes no arguments",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-18-a587128b23dc>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[0mx\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mmy_first_class\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;36m800\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m: my_first_class() takes no arguments"
+     ]
+    }
+   ],
+   "source": [
+    "x = my_first_class(800) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "114b50c3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
